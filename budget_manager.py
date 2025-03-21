@@ -25,6 +25,7 @@ def main_menu():
         elif choice == "2":
             # Add Expense (function to be implemented)
             # budget_data = add_expense(budget_data, amount, description)
+            add_expense(budget_data)
             pass
         elif choice == "3":
             # Show Balance (function to be implemented)
