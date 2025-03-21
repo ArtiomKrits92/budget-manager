@@ -1,4 +1,6 @@
 # budget_manager.py
+import functions
+
 
 # Define the budget data structure
 budget_data = {
@@ -6,8 +8,11 @@ budget_data = {
     "transactions": []
 }
 
+
 # Menu system
 def main_menu():
+    global budget_data  # Ensure global access
+    
     while True:
         print("\nBudget Manager")
         print("1. Add Income")
@@ -21,7 +26,7 @@ def main_menu():
         if choice == "1":
             # Add Income (function to be implemented)
             # budget_data = add_income(budget_data, amount, description)
-            pass
+            budget_data = functions.add_income(budget_data)
         elif choice == "2":
             # Add Expense (function to be implemented)
             # budget_data = add_expense(budget_data, amount, description)
@@ -39,6 +44,7 @@ def main_menu():
             break
         else:
             print("Invalid choice, please try again.")
+
 
 # Run the program
 if __name__ == "__main__":
